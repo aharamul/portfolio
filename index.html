@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Andrea Haramulová – UX/UI Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Figtree:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body id="home">
+    <!-- Background Shapes -->
+    <div class="background-shapes">
+      <div class="shape shape1"></div>
+      <div class="shape shape2"></div>
+      <div class="shape shape3"></div>
+      <div class="shape shape4"></div>
+      <div class="shape shape5"></div>
+      <div class="shape shape6"></div>
+      <div class="shape shape7"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+      <div><a class="ah" href="#home">AH</a></div>
+      <div>
+        <a href="#projects">Projekty</a>
+        <a href="#about">O mně</a>
+        <a href="#contact">Kontakt</a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="hero-section">
+      <div class="hero-text">
+        <h1>Váš nový kreativní objev</h1>
+        <p>
+          Jsem nadšená začínající UX/UI designérka s uměleckým vzděláním<br />
+          a bohatými zkušenosti s různými médii.
+        </p>
+        <a href="#contact" class="cta-button">Chci spolupracovat!</a>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="content">
+      <!-- Projects Overview -->
+      <section id="projects" class="bento-section glass-section">
+        <h2>Vybrané Projekty</h2>
+        <div class="bento-grid">
+          <div class="project-card">
+            <img
+              src="vizitka-nahled.jpg"
+              alt="Náhled Projekt A"
+              class="project-thumbnail"
+            />
+            <h3>Online vizitka</h3>
+            <p>Návrh jednoduché fiktivní vizitky v HTML a CSS</p>
+            <a
+              href="projects/project1/index.html"
+              target="_blank"
+              class="button-secondary"
+              >Prohlédnout si</a
+            >
+          </div>
+          <div class="project-card">
+            <h3>Projekt B</h3>
+            <p>Prototyp pro e-commerce platformu.</p>
+            <a href="#project-b" class="button-secondary">Zobrazit detail</a>
+          </div>
+          <div class="project-card">
+            <h3>Projekt C</h3>
+            <p>Mobilní aplikace a brand identity.</p>
+            <a href="#project-c" class="button-secondary">Zobrazit detail</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="about-section glass-section">
+        <h2>O mně</h2>
+        <div class="about-content">
+          <div class="about-image">
+            <img src="https://placehold.co/300x300" alt="Andrea Portrét" />
+          </div>
+          <div class="about-text">
+            <p>
+              Jsem nadšená UX/UI designérka se zálibou v ilustraci, typografii a
+              vývoji uživatelských rozhraní.
+            </p>
+            <p>
+              Věřím v lidský přístup, hravost a estetiku, která pomáhá řešit
+              problémy.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact-section">
+        <h2>Chceš spolupracovat?</h2>
+        <p class="contact-tagline">
+          Ozvi se mi a vytvoříme spolu něco skvělého.
+        </p>
+        <form
+          action="mailto:haramulovaa@gmail.com"
+          method="POST"
+          enctype="text/plain"
+        >
+          <label for="name">Jméno</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Zpráva</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit" class="cta-button">Odeslat zprávu</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2025 Andrea Haramulová. Všechna práva vyhrazena.</p>
+    </footer>
+  </body>
+</html>

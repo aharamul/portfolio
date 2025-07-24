@@ -1,0 +1,297 @@
+/* === BASE === */
+:root {
+  --main-accent: #a89beb;
+  --main-accent-trans: #a89beb70;
+  --secondary: #8dba68;
+  --secondary-dark: #097168;
+  --text-dark: #1e1e2e;
+  --neutral: #e1e1e1;
+  --backgrond-color: #f7f4ef;
+  --glass-bg: rgba(255, 255, 255, 0.298);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Figtree", sans-serif;
+  background-color: var(--backgrond-color);
+  color: var(--text-dark);
+  padding: 0 2rem;
+  position: relative;
+  font-size: 16px;
+}
+
+/* === NAVIGATION === */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(30px);
+  border-radius: 12px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  position: sticky;
+  top: 1rem;
+  z-index: 100;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-dark);
+  margin: 0 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--main-accent);
+}
+.ah {
+  font-weight: 800;
+  margin-top: 1rem;
+}
+
+/* === BACKGROUND SHAPES === */
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.3;
+  z-index: -100;
+  pointer-events: none;
+}
+
+.shape1 {
+  width: 400px;
+  height: 400px;
+  background: var(--main-accent);
+  top: -10%;
+  left: -10%;
+}
+.shape2 {
+  width: 400px;
+  height: 400px;
+  background: var(--secondary);
+  top: 0;
+  right: -10%;
+}
+.shape3 {
+  width: 200px;
+  height: 200px;
+  background: var(--secondary);
+  top: 15%;
+  left: 30%;
+}
+.shape4 {
+  width: 250px;
+  height: 250px;
+  background: var(--secondary);
+  top: 80%;
+  right: 0%;
+}
+.shape5 {
+  width: 400px;
+  height: 400px;
+  background: var(--main-accent);
+  bottom: 0%;
+  left: -20%;
+}
+.shape6 {
+  width: 400px;
+  height: 400px;
+  background: var(--secondary);
+  bottom: 100%;
+  left: 60%;
+}
+.shape7 {
+  width: 400px;
+  height: 400px;
+  background: var(--main-accent);
+  bottom: 50%;
+  left: -30%;
+}
+
+/* === HERO === */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 4rem;
+  max-width: 1200px;
+  margin-left: 8rem;
+}
+
+.hero-text h1 {
+  font-size: 3.815rem;
+  font-weight: 800;
+  font-family: "Figtree", sans-serif;
+  margin-bottom: 1rem;
+}
+.hero-text h2 {
+  font-size: 2rem;
+  font-family: "Figtree", sans-serif;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background-color: var(--text-dark);
+  color: var(--backgrond-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.cta-button:hover {
+  background-color: var(--secondary-dark);
+}
+
+/* === CONTENT WRAPPER === */
+.content {
+  max-width: 1200px;
+  padding: 4rem 0;
+  margin: 0 auto;
+}
+
+/* === PROJECT CARDS === */
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: linear-gradient(
+    135deg,
+    #a89bebe6,
+    /* soft purple */ #c3b9f6cf /* soft green */
+  );
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-dark);
+  padding: 2rem;
+  border-radius: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+.project-card p {
+  padding-top: 1rem;
+}
+.project-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.button-secondary {
+  display: block;
+  margin: 1.5rem auto 0;
+  background: #1e1e2ee9;
+  color: var(--backgrond-color);
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.057), 0 6px 12px rgba(0, 0, 0, 0.059),
+    0 12px 24px rgba(0, 0, 0, 0.039);
+}
+
+.button-secondary:hover {
+  scale: 1.025;
+  background: var(--text-dark);
+  color: white;
+}
+
+.project-thumbnail {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* === INDIVIDUAL PROJECTS === */
+.project-detail {
+  margin: 4rem 0;
+  padding: 2rem;
+  border-radius: 16px;
+}
+
+/* === ABOUT SECTION === */
+.about-section {
+  margin-top: 4rem;
+  border-radius: 20px;
+  padding: 4rem 2rem;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 260px;
+}
+
+.about-image img {
+  max-width: 300px;
+  border-radius: 12px;
+}
+
+/* === GLASS SECTION === */
+.glass-section {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  padding: 3rem 2rem;
+  margin-top: 4rem;
+  border-radius: 20px;
+}
+
+/* === CONTACT FORM === */
+.contact-section {
+  padding: 6rem 2rem 4rem;
+  text-align: left;
+  max-width: 700px;
+  margin: auto;
+}
+
+.contact-tagline {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-section input,
+.contact-section textarea {
+  padding: 0.75rem;
+  border: 1px solid

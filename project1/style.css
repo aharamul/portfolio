@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: #f9f5ec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #2e2e2e;
+}
+
+.background-shapes .shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.shape1 {
+  width: 400px;
+  height: 400px;
+  background: #a89beb;
+  position: absolute;
+  top: -10%;
+  left: -10%;
+}
+
+.shape2 {
+  width: 400px;
+  height: 400px;
+  background: #a89beb;
+  position: absolute;
+  bottom: -10%;
+  right: -10%;
+}
+
+.shape3 {
+  width: 300px;
+  height: 300px;
+  background: #8dba68;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(200, 200, 200, 0.2);
+  backdrop-filter: blur(18px);
+  border-radius: 20px;
+  padding: 2.5rem 3.5rem;
+  width: 360px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -75%;
+  width: 300%;
+  height: 300%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 20%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  transform: skewX(-20deg);
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+  animation: none;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card:hover::before {
+  animation: shine 1.2s ease-in-out;
+  opacity: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes shine {
+  0% {
+    transform: skewX(-20deg) translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: skewX(-20deg) translateX(100%);
+    opacity: 0;
+  }
+}
+
+.card h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 750;
+  color: #a89beb;
+}
+
+.info {
+  margin-bottom: 1.2rem;
+}
+
+.info-label {
+  font-weight: 600;
+  color: #2e2e2e;
+  margin-bottom: 0.2rem;
+}
+
+.info span {
+  font-size: 1rem;
+  color: #2e2e2e;
+  opacity: 0.85;
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 90%;
+    padding: 2rem;
+  }
+
+  .background-shapes .shape {
+    display: none;
+  }
+}
