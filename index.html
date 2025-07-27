@@ -1,130 +1,193 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Andrea Haramulová – UX/UI Portfolio</title>
+    <title>Andrea Haramulová</title>
+    <link rel="stylesheet" href="style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Figtree:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
   </head>
-  <body id="home">
-    <!-- Background Shapes -->
-    <div class="background-shapes">
-      <div class="shape shape1"></div>
-      <div class="shape shape2"></div>
-      <div class="shape shape3"></div>
-      <div class="shape shape4"></div>
-      <div class="shape shape5"></div>
-      <div class="shape shape6"></div>
-      <div class="shape shape7"></div>
-    </div>
-
-    <!-- Navigation -->
-    <nav>
-      <div><a class="ah" href="#home">AH</a></div>
-      <div>
-        <a href="#projects">Projekty</a>
-        <a href="#about">O mně</a>
-        <a href="#contact">Kontakt</a>
-      </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header id="hero" class="hero-section">
-      <div class="hero-text">
-        <h1>Váš nový kreativní objev</h1>
-        <p>
-          Jsem nadšená začínající UX/UI designérka s uměleckým vzděláním<br />
-          a bohatými zkušenosti s různými médii.
-        </p>
-        <a href="#contact" class="cta-button">Chci spolupracovat!</a>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <div class="logo">AH</div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#projects">projekty</a></li>
+            <li><a href="#about">o mně</a></li>
+            <li><a href="#offer">co nabízím</a></li>
+            <li><a href="#contact" class="button-nav">kontakt</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="content">
-      <!-- Projects Overview -->
-      <section id="projects" class="bento-section glass-section">
-        <h2>Vybrané Projekty</h2>
-        <div class="bento-grid">
-          <div class="project-card">
-            <img
-              src="vizitka-nahled.jpg"
-              alt="Náhled Projekt A"
-              class="project-thumbnail"
-            />
+    <main>
+      <section class="hero container">
+        <h1>Andrea Haramulová</h1>
+        <p>Jsem UX/UI designérka s citem pro detail a výtvarným cítěním.</p>
+        <a href="#" class="button-cta">chci spolupracovat</a>
+      </section>
+
+      <!--projekty-->
+      <section id="projects" class="work container">
+        <div class="section-header">
+          <h2>Má práce</h2>
+          <label for="toggle-projects" class="button-nav">Zobrazit vše</label>
+        </div>
+
+        <div class="work-grid">
+          <!-- Project 1: Modal Trigger -->
+          <label for="project1-modal" class="work-item">
+            <img src="vizitka-nahled.jpg" alt="Online vizitka" />
+            <div class="caption">
+              <strong>Online vizitka</strong><br />
+              <small>pomocí HTML a CSS</small>
+            </div>
+          </label>
+
+          <!-- Project 2: Modal Trigger -->
+          <label for="project2-modal" class="work-item">
+            <img src="vizitka-nahled.jpg" alt="UI návrhy" />
+            <div class="caption">
+              <strong>UI návrhy</strong><br />
+              <small>ve Figmě</small>
+            </div>
+          </label>
+
+          <!-- Project 3: Modal Trigger -->
+          <label for="project3-modal" class="work-item">
+            <img src="vizitka-nahled.jpg" alt="Videoart" />
+            <div class="caption">
+              <strong>Mixed media animace</strong><br />
+              <small>Videoart/animace vytvořená zcela na papíře</small>
+            </div>
+          </label>
+        <!--project1-->
+        <input type="checkbox" id="project1-modal" class="modal-toggle" />
+        <div class="modal">
+          <label for="project1-modal" class="modal-bg"></label>
+          <div class="modal-content">
+            <label for="project1-modal" class="modal-close">×</label>
             <h3>Online vizitka</h3>
-            <p>Návrh jednoduché fiktivní vizitky v HTML a CSS</p>
-            <a
-              href="projects/project1/index.html"
-              target="_blank"
-              class="button-secondary"
-              >Prohlédnout si</a
-            >
+            <iframe
+              src="projects/project1/index.html"
+              class="project-frame"
+            ></iframe>
+            <p>
+              Toto je detail projektu Online vizitka, vytvořený pomocí HTML a
+              CSS.
+            </p>
           </div>
-          <div class="project-card">
-            <h3>Projekt B</h3>
-            <p>Prototyp pro e-commerce platformu.</p>
-            <a href="#project-b" class="button-secondary">Zobrazit detail</a>
+        </div>
+        <!--project2-->
+        <input type="checkbox" id="project2-modal" class="modal-toggle" />
+        <div class="modal">
+          <label for="project2-modal" class="modal-bg"></label>
+          <div class="modal-content">
+            <label for="project2-modal" class="modal-close">×</label>
+            <h3>UI návrhy</h3>
+            <iframe
+              class="project-frame2"
+              style="border: 1px solid rgba(0, 0, 0, 0.1)"
+              width="100%"
+              height="300"
+              src="https://embed.figma.com/design/espflZc95L8HGy0qVulSWn/jakpsatweb?node-id=0-1&embed-host=share"
+              allowfullscreen
+            ></iframe>
+            <iframe
+              class="project-frame2"
+              style="border: 1px solid rgba(0, 0, 0, 0.1)"
+              width="100%"
+              height="300"
+              src="https://embed.figma.com/design/DHYJ5NU3ilfIAWRFvCzefK/n%C3%A1vrh-komponent%C5%AF?node-id=0-1&embed-host=share"
+              allowfullscreen
+            ></iframe>
+            <p>
+              Návrhy UI pro redesign webu jakpsatweb.cz a návrh komponenty
+              karty.
+            </p>
           </div>
-          <div class="project-card">
-            <h3>Projekt C</h3>
-            <p>Mobilní aplikace a brand identity.</p>
-            <a href="#project-c" class="button-secondary">Zobrazit detail</a>
+        </div>
+        <!--project3-->
+        <input type="checkbox" id="project3-modal" class="modal-toggle" />
+        <div class="modal">
+          <label for="project3-modal" class="modal-bg"></label>
+          <div class="modal-content">
+            <label for="project3-modal" class="modal-close">×</label>
+            <h3>Papercut - mixed media animace</h3>
+            <iframe
+              src="projects/project1/index.html"
+              class="project-frame"
+            ></iframe>
+            <p>
+              Toto video bylo editované zcela na papíře za pomocí různých médií (tužka, inkoust, akryl, akvarel, voda, oheň)
+            </p>
           </div>
         </div>
       </section>
 
-      <!-- About Section -->
-      <section id="about" class="about-section glass-section">
-        <h2>O mně</h2>
+      <section id="about" class="about-me container">
+        <h2>Kdo jsem?</h2>
         <div class="about-content">
-          <div class="about-image">
-            <img src="https://placehold.co/300x300" alt="Andrea Portrét" />
-          </div>
           <div class="about-text">
             <p>
-              Jsem nadšená UX/UI designérka se zálibou v ilustraci, typografii a
-              vývoji uživatelských rozhraní.
+              Jsem UX/UI designérka s výtvarným cítěním, která propojuje funkční
+              design se smyslem pro detail. Můj přístup je intuitivní, empatický
+              a hravý – ráda naslouchám potřebám uživatelů a přetvářím je v
+              vizuálně čisté a smysluplné digitální produkty.
             </p>
             <p>
-              Věřím v lidský přístup, hravost a estetiku, která pomáhá řešit
-              problémy.
+              Mám zkušenosti s návrhem wireframů, prototypů, uživatelského
+              testování a front-end vývoje (HTML, CSS). Věřím, že skvělý design
+              není jen o estetice, ale o zážitku.
             </p>
+            <a href="cv-andrea-haramulova.pdf" class="button-cta" download
+              >Stáhnout CV</a
+            >
+          </div>
+          <div class="about-image">
+            <img src="profilovka.png" alt="Andrea Haramulová" />
           </div>
         </div>
       </section>
 
-      <!-- Contact Section -->
-      <section id="contact" class="contact-section">
-        <h2>Chceš spolupracovat?</h2>
-        <p class="contact-tagline">
-          Ozvi se mi a vytvoříme spolu něco skvělého.
-        </p>
-        <form
-          action="mailto:haramulovaa@gmail.com"
-          method="POST"
-          enctype="text/plain"
-        >
-          <label for="name">Jméno</label>
-          <input type="text" id="name" name="name" required />
-
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required />
-
-          <label for="message">Zpráva</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-
-          <button type="submit" class="cta-button">Odeslat zprávu</button>
-        </form>
+      <section class="services container" id="offer">
+        <h2>S čím vám ráda pomůžu</h2>
+        <div class="grid-fill">
+          <div class="card">
+            <h3>Illustrace</h3>
+            <p>
+              Vytvořím vám originální lustrace, které vašemu projektu dodají
+              osobitost a osloví zákazníky.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Návrh UX/UI</h3>
+            <p>
+              Pomohu vám navrhnout funkční a uživatelsky přívětivé rozhraní pro
+              web či aplikaci.
+            </p>
+          </div>
+          <div class="card">
+            <h3>HTML a CSS</h3>
+            <p>
+              Mohu mimo jiné nabídnout i základní znalosti HTML a CSS a
+              zprovoznění jednoduchých stránek.
+            </p>
+          </div>
+          <div class="card">
+            <h3>UX research</h3>
+            <p>
+              V neposlední řadě nahlédnu pod pokličku vaší cílové skupiny a
+              pomohu vám zjistit, jaké má potřeby.
+            </p>
+          </div>
+        </div>
       </section>
     </main>
-
-    <footer class="footer">
-      <p>&copy; 2025 Andrea Haramulová. Všechna práva vyhrazena.</p>
-    </footer>
   </body>
 </html>
