@@ -10,10 +10,10 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body id="home">
     <header class="site-header">
       <div class="container nav">
-        <div class="logo">AH</div>
+        <div><a class="logo" href="#home">AH</a></div>
         <nav>
           <ul class="nav-links">
             <li><a href="#projects">projekty</a></li>
@@ -26,23 +26,27 @@
     </header>
 
     <main>
+       <div class="background-shapes">
+      <div class="shape shape1"></div>
+      <div class="shape shape2"></div>
+      <div class="shape shape3"></div>
+      </div>
       <section class="hero container">
+        <img class="hero-image" src="graphics-dancers.png" alt="Graphic of two stylized dancers">
         <h1>Andrea Haramulová</h1>
-        <p>Jsem UX/UI designérka s citem pro detail a výtvarným cítěním.</p>
-        <a href="#" class="button-cta">chci spolupracovat</a>
+        <p>Jsem nadšená designérka s chutí pustit se do nového projektu!</p>
+        <a href="#contact" class="button-cta">chci spolupracovat</a>
+        
       </section>
 
       <!--projekty-->
       <section id="projects" class="work container">
-        <div class="section-header">
           <h2>Má práce</h2>
-          <label for="toggle-projects" class="button-nav">Zobrazit vše</label>
-        </div>
 
         <div class="work-grid">
           <!-- Project 1: Modal Trigger -->
           <label for="project1-modal" class="work-item">
-            <img src="vizitka-nahled.jpg" alt="Online vizitka" />
+            <img src="vizitka.jpg" alt="Online vizitka" />
             <div class="caption">
               <strong>Online vizitka</strong><br />
               <small>pomocí HTML a CSS</small>
@@ -51,7 +55,7 @@
 
           <!-- Project 2: Modal Trigger -->
           <label for="project2-modal" class="work-item">
-            <img src="vizitka-nahled.jpg" alt="UI návrhy" />
+            <img src="ui.png" alt="UI návrhy" />
             <div class="caption">
               <strong>UI návrhy</strong><br />
               <small>ve Figmě</small>
@@ -60,10 +64,18 @@
 
           <!-- Project 3: Modal Trigger -->
           <label for="project3-modal" class="work-item">
-            <img src="vizitka-nahled.jpg" alt="Videoart" />
+            <img src="papercut-thumbnail.png" alt="Videoart" />
             <div class="caption">
               <strong>Mixed media animace</strong><br />
               <small>Videoart/animace vytvořená zcela na papíře</small>
+            </div>
+          </label>
+          <!-- Project 4: Modal Trigger -->
+          <label for="project4-modal" class="work-item">
+            <img src="COVER final.png" alt="Grafický design" />
+            <div class="caption">
+              <strong>Ostatní design</strong><br />
+              <small>Ukázka grafických projektů</small>
             </div>
           </label>
         <!--project1-->
@@ -120,11 +132,31 @@
             <label for="project3-modal" class="modal-close">×</label>
             <h3>Papercut - mixed media animace</h3>
             <iframe
-              src="projects/project1/index.html"
-              class="project-frame"
-            ></iframe>
+            class="project-frame"
+        width="560"
+        height="315"
+        src="https://www.youtube-nocookie.com/embed/29wcMDm9h3w?si=mOlHCqw7oNWXdAc4"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
             <p>
               Toto video bylo editované zcela na papíře za pomocí různých médií (tužka, inkoust, akryl, akvarel, voda, oheň)
+            </p>
+          </div>
+        </div>
+        <!--project4-->
+        <input type="checkbox" id="project4-modal" class="modal-toggle" />
+        <div class="modal">
+          <label for="project4-modal" class="modal-bg"></label>
+          <div class="modal-content">
+            <label for="project4-modal" class="modal-close">×</label>
+            <h3>Grafický design</h3>
+            <iframe class="project-frame" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/NJ1joje60iE2DInODTvc83/graphic-design?node-id=0-1&embed-host=share" allowfullscreen></iframe>
+            <p>
+              Ostatní grafické počiny.
             </p>
           </div>
         </div>
@@ -135,22 +167,25 @@
         <div class="about-content">
           <div class="about-text">
             <p>
-              Jsem UX/UI designérka s výtvarným cítěním, která propojuje funkční
-              design se smyslem pro detail. Můj přístup je intuitivní, empatický
-              a hravý – ráda naslouchám potřebám uživatelů a přetvářím je v
-              vizuálně čisté a smysluplné digitální produkty.
+              Ahoj! Jmenuji se Andrea a jsem začínající UX/UI designérka s chutí objevovat možnosti designu a webového vývoje. Své zkušenosti jsem nasbírala především na detailním kurzu UX/UI designu od Step IT Academy, absolvovaném na jaře a létě 2025.
             </p>
             <p>
-              Mám zkušenosti s návrhem wireframů, prototypů, uživatelského
-              testování a front-end vývoje (HTML, CSS). Věřím, že skvělý design
-              není jen o estetice, ale o zážitku.
+              Nejsem však v designu úplným nováčkem. Z posledních 10 let mám zkušenosti především s hobby ilustrací, malbou a kresbou. Později jsem rozšířila své obzory na škole Art & Design institut, kde jsem se věnovala intermediální umělecké tvorbě a okrajově také grafickému designu. Poslední rok absolvuji stáž v pražském nezávislém rádiu Shella Radio, kde pomáhám s vytvářením thumbnailů a jiné menší grafiky. Ve své tvorbě tíhnu k experimentu a ráda zjišťuji, co všechno médium, se kterým zrovna pracuji, dovede.
             </p>
-            <a href="cv-andrea-haramulova.pdf" class="button-cta" download
-              >Stáhnout CV</a
+            <p>
+              Ráda pracuji s lidmi a s lidskou psychologií. Proto mě také v rámci UX/UI designu láká především výzkum, který je neodmyslitelnou součástí dobré user experience. V budoucnu bych se ráda více zaměřila na tuto zdánlivě neviditelnou část a získala v UX researchi více zkušeností. Dalším mým zájmem je design rozhraní videoher, který mě do samotného UX/UI vtáhl napoprvé a stále mě přitahuje.
+            </p>
+            <p>
+              Pokud máte k dispozici nabídku, ve které myslíte, že bychom se sešli, neváhejte se mi ozvat! Níže přikládám svůj strukturovaný životopis pro více informací.
+            </p>
+            <a href="AndreaHaramulová_životopis_2025.pdf" class="button-cta" target="_blank"
+              >Zobrazit CV</a
             >
           </div>
+          
           <div class="about-image">
-            <img src="profilovka.png" alt="Andrea Haramulová" />
+            <img src="graphics-avatar.png" alt="Andrea Haramulová" />
+            
           </div>
         </div>
       </section>
@@ -188,6 +223,22 @@
           </div>
         </div>
       </section>
+
+      <section class="contact container" id="contact">
+        <h2>Pojďme spolupracovat!</h2>
+        <div class="grid-fill">
+          <a class="email-card">a.haramulova@gmail.com</a>
+          <a href="https://www.linkedin.com/in/andrea-haramulova/" class="button-social">Linked In</a>
+          <a href="https://github.com/aharamul/" class="button-social">GitHub</a>
+          <a href="https://vercel.com/itsayiaas-projects" class="button-social">Vercel</a> 
+          
+        </div>
+        
+      </section>
+      
     </main>
+    <footer class="site-footer">
+      <p>Andrea Haramulová 2025</p>
+    </footer>
   </body>
 </html>
